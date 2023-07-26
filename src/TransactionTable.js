@@ -5,7 +5,6 @@ const TransactionTable = ({ transactions }) => {
     <table>
       <thead>
         <tr>
-          <th>ID</th>
           <th>Date</th>
           <th>Description</th>
           <th>Amount</th>
@@ -14,7 +13,6 @@ const TransactionTable = ({ transactions }) => {
       <tbody>
         {transactions.map(transaction => (
           <tr key={transaction.id}>
-            <td>{transaction.id}</td>
             <td>{transaction.date}</td>
             <td>{transaction.description}</td>
             <td> {transaction.amount}

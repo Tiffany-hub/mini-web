@@ -6,6 +6,7 @@ const TransactionTable = ({ transactions }) => {
       <thead>
         <tr>
           <th>ID</th>
+          <th>Date</th>
           <th>Description</th>
           <th>Amount</th>
         </tr>
@@ -14,11 +15,9 @@ const TransactionTable = ({ transactions }) => {
         {transactions.map(transaction => (
           <tr key={transaction.id}>
             <td>{transaction.id}</td>
+            <td>{transaction.date}</td>
             <td>{transaction.description}</td>
-            <td>
-              {typeof transaction.amount === 'number'
-                ? `${transaction.amount.toFixed(2)}`
-                : 'Invalid Amount'}
+            <td> {transaction.amount}
             </td>
           </tr>
         ))}
